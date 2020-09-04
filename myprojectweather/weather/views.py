@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 # Create your views here.
 def index(request):
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=9cb1eb38e08f967c8af841bec68be827'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=YOUR_API_KEY'
     city='mumbai'
     r = requests.get(url.format(city)).json()
     print(r)
